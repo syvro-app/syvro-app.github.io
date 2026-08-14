@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syvro — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0E16;
+    --purple: #7B6FD4;
+    --purple-dim: #5c53a3;
+    --paper: #F7F5F1;
+    --ink: #1c1a22;
+    --ink-soft: #4a4658;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(123,111,212,0.15), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(123,111,212,0.08), transparent 45%);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.7;
+  }
+  header { padding: 64px 24px 48px; text-align: center; }
+  .wordmark { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.08em; font-size: 1.6rem; color: var(--purple); text-transform: uppercase; }
+  .eyebrow { font-family: 'Orbitron', sans-serif; font-weight: 600; letter-spacing: 0.22em; font-size: 0.7rem; text-transform: uppercase; color: #9a94c4; margin-top: 14px; }
+  .updated { color: #6b6785; font-size: 0.85rem; margin-top: 6px; font-family: 'Source Serif 4', Georgia, serif; }
+  main { max-width: 760px; margin: 0 auto 80px; padding: 0 20px; }
+  .paper { background: var(--paper); border-radius: 14px; padding: 48px 44px 56px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55); }
+  .lede { font-size: 1.08rem; color: var(--ink-soft); border-left: 3px solid var(--purple); padding-left: 20px; margin: 0 0 40px; }
+  h2 { font-family: 'Orbitron', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--purple-dim); margin: 40px 0 14px; padding-top: 8px; }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  .callout { background: #ECE9FB; border: 1px solid #d8d2f0; border-radius: 10px; padding: 18px 20px; margin: 24px 0; font-size: 0.97rem; }
+  .callout strong { color: var(--purple-dim); }
+  a { color: var(--purple-dim); }
+  footer { text-align: center; padding: 40px 20px 60px; color: #6b6785; font-size: 0.85rem; }
+  footer a { color: var(--purple); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { .paper { padding: 32px 24px 40px; } header { padding: 48px 20px 36px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Syvro</div>
+  <div class="eyebrow">Privacy Policy</div>
+  <div class="updated">Last updated: August 14, 2026</div>
+</header>
+<main>
+  <div class="paper">
+    <p class="lede">Syvro is built to keep your financial information private by design, not by policy alone. This page explains exactly what that means.</p>
+    <h2>The short version</h2>
+    <div class="callout">
+      <strong>Syvro does not collect, transmit, sell, or share your data — because it never leaves your device.</strong>
+      Everything you enter (bills, balances, spending amounts, categories) is stored locally on your phone or tablet, encrypted at rest. Syvro has no servers, no account system, no analytics, and no third-party tracking. We could not see your financial data even if we wanted to.
+    </div>
+    <h2>What information Syvro stores</h2>
+    <p>Syvro stores only what you manually type into the app:</p>
+    <ul>
+      <li>Bill and expense names, amounts, due dates, and frequencies you enter</li>
+      <li>Account balance figures you enter</li>
+      <li>App preferences, such as your lock timeout and payday frequency settings</li>
+    </ul>
+    <p>Syvro does not connect to any bank, financial institution, or payment provider, and never will. There is no account linking, no bank credential entry, and no automatic transaction import in this app.</p>
+    <h2>Where your information is stored</h2>
+    <p>All data is stored locally on your device using Android's encrypted storage (EncryptedSharedPreferences / DataStore). It is not uploaded to any cloud service, backend server, or third party. Syvro is also configured to exclude its data from Android's automatic device backup system, so your financial information does not leave your device even through routine phone backups.</p>
+    <h2>Biometric authentication</h2>
+    <p>If you enable app lock, Syvro uses your device's built-in biometric system (fingerprint or face recognition) via Android's standard BiometricPrompt. Syvro never sees, stores, or has access to your biometric data itself — that is handled entirely by your device's operating system and secure hardware, the same way it is for unlocking your phone.</p>
+    <h2>Data sharing and third parties</h2>
+    <p>Syvro does not share, sell, rent, or transmit your data to anyone, for any reason — including to Anthropic, advertisers, analytics providers, or any other third party. Syvro contains no advertising SDKs, no analytics SDKs, and makes no network requests at all in its current version.</p>
+    <h2>Your control over your data</h2>
+    <p>Because everything is stored only on your device, you are always in full control:</p>
+    <ul>
+      <li>Deleting a bill or expense in the app permanently removes it from your device</li>
+      <li>Uninstalling Syvro permanently deletes all of your data, since nothing is backed up elsewhere</li>
+      <li>There is no account to delete and no external copy of your data to request removal of, because none exists</li>
+    </ul>
+    <h2>Children's privacy</h2>
+    <p>Syvro is not directed at children and is not intended for use by anyone under the age of 13. We do not knowingly collect information from children, and given the app requires no account creation and makes no network requests, no such collection occurs.</p>
+    <h2>Future features</h2>
+    <p>Syvro may introduce optional paid features in the future. Any feature that would change this privacy posture — such as a household-sharing feature requiring data to sync between devices — will only be introduced with a clearly updated privacy policy explaining exactly what changes, and will never be enabled without being disclosed here first.</p>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "Last updated" date at the top of this page will change accordingly. We encourage you to review this page periodically.</p>
+    <h2>Contact</h2>
+    <p>Questions about this policy or how Syvro handles your information can be sent to <a href="mailto:syvrosupport@gmail.com">syvrosupport@gmail.com</a>.</p>
+  </div>
+</main>
+<footer>
+  Syvro · Private by design · <a href="mailto:syvrosupport@gmail.com">syvrosupport@gmail.com</a>
+</footer>
+</body>
+</html>
