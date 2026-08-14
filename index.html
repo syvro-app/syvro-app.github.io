@@ -39,7 +39,13 @@
   .container{max-width:1180px;margin:0 auto;padding:0 24px;}
   section{position:relative;z-index:1;padding:96px 0;}
 
-  /* ---------- Pinned shield watermark ---------- */
+  /* ---------- Pinned shield watermark ----------
+     BRAND REQUIREMENT (Jim, Aug 2026): the pinned shield is the Syvro brand
+     logo, not decoration. Keep it clearly visible/bright behind the content —
+     do not dim it back down in future passes without checking with Jim first.
+     If legibility of foreground text becomes an issue, fix it via the
+     section-head / panel backdrop scrims below, not by dimming the shield.
+  ---------------------------------------------- */
   .shield-watermark{
     position:fixed;
     inset:0;
@@ -53,21 +59,21 @@
   .shield-watermark img{
     width:min(90vw,900px);
     height:auto;
-    opacity:0.28;
-    filter:saturate(0.85) blur(1.5px);
+    opacity:0.55;
+    filter:saturate(1.05);
   }
   .shield-watermark::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(11,14,22,0.4);
+    background:rgba(11,14,22,0.15);
     z-index:1;
   }
   .shield-watermark::after{
     content:"";
     position:absolute;
     inset:0;
-    background:radial-gradient(ellipse at center, rgba(11,14,22,0) 0%, rgba(11,14,22,0.6) 65%, rgba(11,14,22,0.94) 100%);
+    background:radial-gradient(ellipse at center, rgba(11,14,22,0) 0%, rgba(11,14,22,0.4) 68%, rgba(11,14,22,0.82) 100%);
     z-index:1;
   }
 
