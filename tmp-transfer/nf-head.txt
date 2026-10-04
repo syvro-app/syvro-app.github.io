@@ -1,8 +1,8 @@
 <style>
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:#0c0d10!important}
-#wrapper,#main,#main>.inner{padding:0!important;margin:0!important;max-width:none!important;width:100%!important;border:0!important;box-shadow:none!important;background:transparent!important}
-#main>.inner>*{margin:0!important}
+html,body{background:#0c0d10!important}
+.site-wrapper,.site-main,.site-main>.inner{padding:0!important;margin:0!important;max-width:none!important;width:100%!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}
+.site-main>.inner>*{margin:0!important;max-width:none!important;width:100%!important}
 #nf *{box-sizing:border-box}
 </style>
