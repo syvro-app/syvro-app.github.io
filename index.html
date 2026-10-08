@@ -157,9 +157,16 @@
   .trust-line svg{flex-shrink:0;color:var(--accent-2);}
 
   .hero-visual{
-    position:relative;display:flex;justify-content:center;align-items:flex-end;
+    position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;
     min-height:380px;
   }
+  .hero-phone{
+    position:relative;z-index:1;width:270px;background:#1b1f36;border:1px solid var(--border);
+    border-radius:30px;padding:8px;box-shadow:0 30px 60px -28px rgba(0,0,0,0.85);
+  }
+  .hero-phone img{width:100%;height:auto;border-radius:23px;aspect-ratio:1/2;}
+  .hero-pair{display:flex;align-items:flex-end;justify-content:center;gap:14px;}
+  .hero-visual .mascot-wrap{width:170px;flex-shrink:0;margin-bottom:6px;}
   .mascot-wrap{
     position:relative;width:100%;max-width:420px;
     animation:float 5s ease-in-out infinite;
@@ -177,7 +184,8 @@
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr;}
     .hero-visual{margin-top:20px;min-height:280px;}
-    .mascot-wrap{max-width:280px;}
+    .hero-phone{width:200px;}
+    .hero-visual .mascot-wrap{width:110px;}
   }
 
   /* ---------- Section headers ---------- */
@@ -390,10 +398,13 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="mascot-wrap">
-              <img src="assets/syvro_mascot.png" alt="Syvro mascot — a guardian lion, watching over your money">
-              <p class="mascot-caption">Syvro — standing guard over your Safe To Spend number.</p>
+            <div class="hero-pair">
+              <div class="mascot-wrap">
+                <img src="assets/syvro_mascot.png" alt="Syvro mascot — a guardian lion, watching over your money">
+              </div>
+              <div class="hero-phone"><img src="assets/screens/1_home_v2.webp" width="720" height="1440" alt="Syvro Home screen showing the Safe To Spend amount and funds reserved"></div>
             </div>
+            <p class="mascot-caption">Syvro — standing guard over your Safe To Spend number.</p>
           </div>
         </div>
       </section>
@@ -510,7 +521,7 @@
             <div class="feature-card reveal">
               <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
               <h3>Biometric lock</h3>
-              <p>App-level lock using your device's fingerprint or face unlock — replacing an earlier plaintext PIN system.</p>
+              <p>App-level lock using your device's fingerprint or face unlock.</p>
             </div>
             <div class="feature-card reveal">
               <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5"/></svg></div>
@@ -694,7 +705,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; 2026 Syvro. All rights reserved.</span>
+          <span>&copy; 2026 Northfell Digital.</span>
           <span>Android app · Not yet available on Google Play</span>
         </div>
       </div>
