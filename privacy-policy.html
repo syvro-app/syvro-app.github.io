@@ -52,7 +52,7 @@
 <header>
   <div class="wordmark">Syvro</div>
   <div class="eyebrow">Privacy Policy</div>
-  <div class="updated">Last updated: October 3, 2026</div>
+  <div class="updated">Last updated: October 7, 2026</div>
 </header>
 <main>
   <div class="paper">
@@ -60,39 +60,52 @@
     <h2>The short version</h2>
     <div class="callout">
       <strong>Syvro does not collect, sell, or share your data. It stays on your device unless you tell it to move.</strong>
-      Everything you enter (bills, balances, spending amounts, categories) is stored locally on your phone or tablet, encrypted at rest. Syvro has no servers, no account system, no analytics, and no third-party tracking. The only ways your data leaves your phone are ones you start yourself: Family Sync to a phone you've paired, or an export file you choose to create. We could not see your financial data even if we wanted to.
+      Everything you enter (bills, balances, spending amounts, categories) is stored locally on your phone or tablet. Syvro has no servers, no account system, no analytics, and no third-party tracking. The only ways your data leaves your phone are ones you start yourself: Family Sync to a phone you've paired, or an export file you choose to create and send. We could not see your financial data even if we wanted to.
     </div>
     <h2>What information Syvro stores</h2>
-    <p>Syvro stores only what you manually type into the app:</p>
+    <p>Syvro stores what you type into the app, plus the records it needs to keep your bills in order:</p>
     <ul>
-      <li>Bill and expense names, amounts, due dates, and frequencies you enter</li>
+      <li>Bill and expense names, categories, amounts, due days, and frequencies you enter</li>
       <li>Account balance figures you enter</li>
+      <li>The name you enter in Syvro</li>
+      <li>When each bill was last changed</li>
+      <li>A small record for each bill you delete (see "Deleted bills" below)</li>
       <li>App preferences, such as your lock timeout and payday frequency settings</li>
+      <li>If you use Family Sync, the pairing key shared with your paired phone</li>
     </ul>
     <p>Syvro does not connect to any bank or financial institution, and never will. There is no account linking, no bank credential entry, and no automatic transaction import in this app. Optional purchases are handled by Google Play (see below), not by Syvro.</p>
     <h2>Where your information is stored</h2>
-    <p>All data is stored locally on your device using Android's encrypted storage (EncryptedSharedPreferences / DataStore). It is not uploaded to any cloud service, backend server, or third party. Syvro is also configured to exclude its data from Android's automatic device backup system, so your financial information does not leave your device even through routine phone backups.</p>
+    <p>All of your data is stored locally on your device. It is not uploaded to any cloud service, backend server, or third party.</p>
+    <ul>
+      <li>Amounts (bill amounts and balances) and the Family Sync pairing key are kept in Android's encrypted storage.</li>
+      <li>Everything else, including bill names, categories, due days, frequencies, the deleted-bill records and hidden list, and your settings, is kept in Syvro's private storage on your phone and is not separately encrypted.</li>
+    </ul>
+    <p>Syvro is also configured to exclude its data from Android's automatic device backup system, so your financial information does not leave your device even through routine phone backups.</p>
     <h2>App lock: PIN and biometrics</h2>
     <p>If you enable app lock, Syvro uses your device's built-in biometric system (fingerprint or face recognition) via Android's standard BiometricPrompt. Syvro never sees, stores, or has access to your biometric data itself — that is handled entirely by your device's operating system and secure hardware, the same way it is for unlocking your phone.</p>
     <p>If you set a PIN, it is stored on your device only as a one-way hash, not as the PIN itself. We cannot see your PIN, and it never leaves your device.</p>
+    <h2>Deleted bills</h2>
+    <p>When you delete a bill you added, Syvro erases its amount, due day, frequency, and other settings. It keeps a small deletion record: an internal ID, the bill's name, its category, and the time you deleted it. When you delete one of Syvro's built-in bills, its amount and settings are erased and its name is added to a hidden list.</p>
+    <p>Family Sync uses these records to delete the bill on your paired phone and to stop it from coming back. They are included in every Family Sync and in export files. They stay on your phone until you uninstall Syvro or clear its data in Android's settings.</p>
     <h2>Family Sync and export files (optional)</h2>
     <p>Family Sync is an optional one-time purchase that keeps Syvro in sync between exactly two phones. If you use it:</p>
     <ul>
       <li>The two phones are paired with a PIN you confirm on both devices. Syvro only syncs with the phone you paired.</li>
-      <li>Your data is encrypted and travels directly from one phone to the other over Wi-Fi / Android's Nearby Connections. It does not pass through any Syvro server, because there isn't one.</li>
+      <li>Your data is sent between the two phones using Google's Nearby Connections. The connection between the phones is encrypted by Nearby Connections, and Syvro verifies that the other phone is your paired partner. Your data does not pass through any Syvro server, because there isn't one.</li>
+      <li>Every sync includes the deleted-bill records and hidden list described above.</li>
       <li>Android may ask you to allow the permissions needed to find and connect to your other phone (such as Nearby devices). They are used only for pairing and syncing.</li>
-      <li>You can also export your data to a .syvrosync file and import it on another phone. Syvro only creates this file when you ask it to, and you choose where it goes. The file is encrypted.</li>
+      <li>You can also export your data to a .syvrosync file and send it yourself, for example by email or a messaging app, using Android's share menu. Syvro only creates this file when you ask it to. This file is not encrypted. It is plain text that contains the name you entered in Syvro, your bank balance, and all of your bills: each bill's name, amount, due day, frequency, and when it was last changed, plus the deleted-bill records and hidden list. Syvro never receives or stores this file. It goes only where you send it, and the app or service you send it with handles it under its own privacy policy. Anyone who has the file and Syvro with Family Sync can import it after confirming a prompt, so treat it like any other private financial document and delete it once it has been imported.</li>
     </ul>
     <h2>Purchases (Tip Jar, Plus, Family Sync)</h2>
     <p>All purchases are optional and processed by Google Play. Syvro never sees or stores your payment details. Google Play tells the app whether a purchase went through so it can unlock what you bought; Google's handling of that transaction is covered by Google's own privacy policy. Tip Jar tips are one-time and unlock nothing.</p>
     <h2>Data sharing and third parties</h2>
-    <p>Syvro does not share, sell, rent, or transmit your data to anyone, for any reason — including advertisers, analytics providers, or any other third party. Syvro contains no advertising SDKs and no analytics SDKs. The app only uses the network for Google Play purchases and, if you use it, Family Sync between your own two phones.</p>
+    <p>Syvro does not share, sell, rent, or transmit your data to anyone, for any reason — including advertisers, analytics providers, or any other third party. Syvro contains no advertising SDKs and no analytics SDKs. The app only uses the network for Google Play purchases and, if you use it, Family Sync between your own two phones. If you export a .syvrosync file and send it to someone, it goes through the app you choose to send it with, not through Syvro.</p>
     <h2>Your control over your data</h2>
     <p>Because everything is stored only on your device, you are always in full control:</p>
     <ul>
-      <li>Deleting a bill or expense in the app permanently removes it from your device</li>
-      <li>Uninstalling Syvro permanently deletes all of your data from that phone, since nothing is backed up elsewhere</li>
-      <li>If you've synced with a second phone or saved an export file, those copies stay where they are until you delete them there</li>
+      <li>Deleting a bill erases its amount and settings. A small record of the deletion (its name, category, and when it was deleted) stays on your phone so Family Sync can keep your paired phone in step. See "Deleted bills" above.</li>
+      <li>Uninstalling Syvro, or clearing its data in Android's settings, permanently deletes all of your data from that phone, including the deletion records, since nothing is backed up elsewhere</li>
+      <li>If you've synced with a second phone or saved or sent an export file, those copies stay where they are until you delete them there</li>
       <li>There is no account to delete and no copy of your data held by us to request removal of, because we never receive it</li>
     </ul>
     <h2>Children's privacy</h2>
