@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syvro — Know What's Actually Yours to Spend</title>
-<meta name="description" content="Syvro is a privacy-first, 100% local Android app that shows your Safe to Spend amount after your bills are reserved. No bank linking. Ever.">
+<meta name="description" content="Syvro is a privacy-first, 100% local Android app that shows your Safe To Spend amount after your bills are reserved. No bank linking. Ever.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -334,6 +334,16 @@
   /* scroll reveal */
   .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease, transform 0.6s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
+
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px 28px; max-width: 1120px; margin: 0 auto; }
+.gallery figure { flex: 0 0 240px; margin: 0; }
+.gallery .shot { position: relative; background: #1b1f36; border: 1px solid var(--border); border-radius: 28px; padding: 8px; box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.8); }
+.gallery .shot img { width: 100%; height: auto; border-radius: 21px; aspect-ratio: 1 / 2; }
+.gallery .tag { display: inline-block; vertical-align: 2px; margin-left: 6px; background: var(--accent); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; text-shadow: none; }
+.gallery figcaption { margin-top: 14px; font-size: 0.9rem; color: var(--muted); text-align: center; text-shadow: rgba(11, 14, 22, 0.9) 0px 1px 8px; }
+.gallery figcaption b { display: block; color: var(--text); font-size: 1rem; margin-bottom: 2px; }
+.gallery-note { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
+@media (max-width: 600px) { .gallery { gap: 28px 14px; } .gallery figure { flex: 0 0 calc(50% - 7px); } .gallery .shot { border-radius: 20px; padding: 5px; } .gallery .shot img { border-radius: 15px; } .gallery .tag { font-size: 0.56rem; padding: 2px 6px; margin-left: 4px; } .gallery figcaption { font-size: 0.82rem; } }
 </style>
 </head>
 <body>
@@ -382,7 +392,7 @@
           <div class="hero-visual">
             <div class="mascot-wrap">
               <img src="assets/syvro_mascot.png" alt="Syvro mascot — a guardian lion, watching over your money">
-              <p class="mascot-caption">Syvro — standing guard over your Safe to Spend number.</p>
+              <p class="mascot-caption">Syvro — standing guard over your Safe To Spend number.</p>
             </div>
           </div>
         </div>
@@ -410,9 +420,51 @@
             <div class="step-card reveal">
               <div class="step-num">03</div>
               <h3>You see what's really free</h3>
-              <p>What's left is your actual Safe to Spend number — updated daily, with Payday Intel telling you whether things look Comfortable, Watch It, or Tight until your next paycheck.</p>
+              <p>What's left is your actual Safe To Spend number — updated daily, with Payday Intel telling you whether things look Comfortable, Watch It, or Tight until your next paycheck.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOTS -->
+      <section id="screens">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">See it</span>
+            <h2>A look inside Syvro</h2>
+            <p>Screens from the current build, filled with demo data.</p>
+          </div>
+          <div class="gallery" aria-label="Syvro screenshots">
+            <figure>
+              <div class="shot"><img src="assets/screens/1_home_v2.webp" width="720" height="1440" loading="lazy" alt="Syvro Home screen: Your Safe To Spend amount and funds reserved, at a glance"></div>
+              <figcaption><b>Home</b>Your Safe To Spend amount and funds reserved, at a glance.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/2_payday_intel.webp" width="720" height="1440" loading="lazy" alt="Syvro Payday Intel screen: Days until payday, a daily budget, and how tight things are"></div>
+              <figcaption><b>Payday Intel</b>Days until payday, a daily budget, and how tight things are.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/3_expenses.webp" width="720" height="1440" loading="lazy" alt="Syvro Expenses screen: Bills by category, with what's reserved for each one"></div>
+              <figcaption><b>Expenses</b>Bills by category, with what's reserved for each one.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/4_add_bill.webp" width="720" height="1440" loading="lazy" alt="Syvro Add a bill screen: Type in a bill once. No bank connection"></div>
+              <figcaption><b>Add a bill</b>Type in a bill once. No bank connection.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/5_settings.webp" width="720" height="1440" loading="lazy" alt="Syvro Settings screen: App lock, alerts, accounts and Family Sync"></div>
+              <figcaption><b>Settings</b>App lock, alerts, accounts and Family Sync.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/6_wish_list.webp" width="720" height="1440" loading="lazy" alt="Syvro Wish List screen: Save up for the things you want"></div>
+              <figcaption><b>Wish List <span class="tag">Plus</span></b>Save up for the things you want.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens/8_family_sync.webp" width="720" height="1440" loading="lazy" alt="Syvro Family Sync screen: Keep two phones in step, no server in between"></div>
+              <figcaption><b>Family Sync <span class="tag">Add-on</span></b>Keep two phones in step, no server in between.</figcaption>
+            </figure>
+          </div>
+          <p class="gallery-note">Wish List is part of Plus. Family Sync is its own one-time purchase.</p>
         </div>
       </section>
 
@@ -427,7 +479,7 @@
           <div class="feature-grid">
             <div class="feature-card reveal">
               <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/></svg></div>
-              <h3>Safe to Spend reserve tracker</h3>
+              <h3>Safe To Spend reserve tracker</h3>
               <p>The core of the app — a daily number that sets the full amount for upcoming bills aside right away, not a little at a time.</p>
             </div>
             <div class="feature-card reveal">
@@ -543,7 +595,7 @@
             <div class="price-amount">$0</div>
             <ul>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Manual bill &amp; expense entry — no bank linking, ever</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Daily Safe to Spend reserve</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Daily Safe To Spend reserve</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Payday Intel pressure meter (Comfortable / Watch It / Tight)</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Once / weekly / bi-weekly frequencies</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mark as Posted &amp; automatic fund release</li>
