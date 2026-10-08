@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syvro Privacy Policy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,9 +47,27 @@
   footer a { color: var(--purple); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
   @media (max-width: 600px) { .paper { padding: 32px 24px 40px; } header { padding: 48px 20px 36px; } }
+  /* Pinned shield watermark: same treatment as the Syvro home page (index.html). Logo used as supplied. */
+  .shield-watermark { position: fixed; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; }
+  .shield-watermark img { width: min(90vw, 900px); height: auto; opacity: 0.55; filter: saturate(1.05); }
+  .shield-watermark::before { content: ""; position: absolute; inset: 0; background: rgba(11,14,22,0.15); z-index: 1; }
+  .shield-watermark::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(11,14,22,0) 0%, rgba(11,14,22,0.4) 68%, rgba(11,14,22,0.82) 100%); z-index: 1; }
+  header, main, footer { position: relative; z-index: 1; }
+  header div, footer { text-shadow: 0 2px 16px rgba(11,14,22,0.95), 0 1px 3px rgba(11,14,22,0.9); }
+  .updated, footer { color: #a9a4c8; }
+  /* Dark card to match the Syvro site (preview) */
+  .paper { background: rgba(19,23,40,0.70); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); color: #E8E6F2; }
+  .lede { color: #C3BEDD; }
+  h2 { color: #9c8ff0; }
+  .callout { background: rgba(123,111,212,0.14); border-color: rgba(123,111,212,0.35); color: #E8E6F2; }
+  .callout strong { color: #b7adf5; }
+  a { color: #b7adf5; }
 </style>
 </head>
 <body>
+<div class="shield-watermark" aria-hidden="true">
+  <img src="assets/spendsafe_shield_transparent.png" alt="">
+</div>
 <header>
   <div class="wordmark">Syvro</div>
   <div class="eyebrow">Privacy Policy</div>
@@ -80,17 +99,16 @@
       <li>Amounts (bill amounts and balances) and the Family Sync pairing key are kept in Android's encrypted storage.</li>
       <li>Everything else, including bill names, categories, due days, frequencies, the deleted-bill records and hidden list, and your settings, is kept in Syvro's private storage on your phone and is not separately encrypted.</li>
     </ul>
-    <p>Syvro is also configured to exclude its data from Android's automatic device backup system, so your financial information does not leave your device even through routine phone backups.</p>
-    <h2>App lock: PIN and biometrics</h2>
-    <p>If you enable app lock, Syvro uses your device's built-in biometric system (fingerprint or face recognition) via Android's standard BiometricPrompt. Syvro never sees, stores, or has access to your biometric data itself. That is handled entirely by your device's operating system and secure hardware, the same way it is for unlocking your phone.</p>
-    <p>If you set a PIN, it is stored on your device only as a one-way hash, not as the PIN itself. We cannot see your PIN, and it never leaves your device.</p>
+    <p>Syvro is configured to exclude its stored data (preferences, settings and records) from Android's automatic cloud backup and device-to-device transfer.</p>
+    <h2>App lock</h2>
+    <p>If you enable app lock, Syvro asks Android to confirm it's you, using your phone's own screen lock (PIN, pattern or password) or your fingerprint or face, through Android's standard BiometricPrompt. Syvro does not have a PIN of its own, and it never sees, stores, or has access to your PIN, pattern, password or biometric data. Android handles all of that, the same way it does when you unlock your phone.</p>
     <h2>Deleted bills</h2>
     <p>When you delete a bill you added, Syvro erases its amount, due day, frequency, and other settings. It keeps a small deletion record: an internal ID, the bill's name, its category, and the time you deleted it. When you delete one of Syvro's built-in bills, its amount and settings are erased and its name is added to a hidden list.</p>
     <p>Family Sync uses these records to delete the bill on your paired phone and to stop it from coming back. They are included in every Family Sync and in export files. They stay on your phone until you uninstall Syvro or clear its data in Android's settings.</p>
     <h2>Family Sync and export files (optional)</h2>
     <p>Family Sync is an optional one-time purchase that keeps Syvro in sync between exactly two phones. If you use it:</p>
     <ul>
-      <li>The two phones are paired with a PIN you confirm on both devices. Syvro only syncs with the phone you paired.</li>
+      <li>The two phones are paired by confirming that the same code appears on both devices. Syvro only syncs with the phone you paired.</li>
       <li>Your data is sent between the two phones using Google's Nearby Connections. The connection between the phones is encrypted by Nearby Connections, and Syvro verifies that the other phone is your paired partner. Your data does not pass through any Syvro server, because there isn't one.</li>
       <li>Every sync includes the deleted-bill records and hidden list described above.</li>
       <li>Android may ask you to allow the permissions needed to find and connect to your other phone (such as Nearby devices). They are used only for pairing and syncing.</li>
@@ -99,17 +117,17 @@
     <h2>Purchases (Tip Jar, Plus, Family Sync)</h2>
     <p>All purchases are optional and processed by Google Play. Syvro never sees or stores your payment details. Google Play tells the app whether a purchase went through so it can unlock what you bought; Google's handling of that transaction is covered by Google's own privacy policy. Tip Jar tips are one-time and unlock nothing.</p>
     <h2>Website waitlist (not the app)</h2>
-    <p>If you join the Syvro launch waitlist on the Syvro website (syvro-app.github.io), we collect only the email address you enter. The form is delivered by FormSubmit, a form-forwarding service, which sends your address to our support inbox (syvrosupport@gmail.com, a Gmail account). FormSubmit also keeps its own copy of form submissions under its own privacy policy, and we don't control how long it keeps that copy.</p>
+    <p>If you join the Syvro launch waitlist on the Syvro website (syvro-app.github.io), we collect only the email address you enter. The form is delivered by FormSubmit, a form-forwarding service, which sends your address to our support inbox (syvrosupport@gmail.com, a Gmail account). FormSubmit may also keep a copy of form submissions under its own privacy policy, and we don't control how long it keeps any such copy.</p>
     <p>We use your email only to tell you when Syvro launches. We never sell it or share it beyond the services named above. We keep it until the launch announcement is sent and delete it within 30 days after that, or sooner if you ask. To be removed, email syvrosupport@gmail.com.</p>
     <h2>Data sharing and third parties</h2>
-    <p>Syvro does not share, sell, rent, or transmit your data to anyone, for any reason, including advertisers, analytics providers, or any other third party. Syvro contains no advertising SDKs and no analytics SDKs. The app only uses the network for Google Play purchases and, if you use it, Family Sync between your own two phones. If you export a .syvrosync file and send it to someone, it goes through the app you choose to send it with, not through Syvro.</p>
+    <p>Syvro does not share, sell, rent, or transmit your data to anyone, for any reason, including advertisers, analytics providers, or any other third party. Syvro contains no advertising SDKs and no analytics SDKs. The app only uses the network for Google Play purchases and, if you use it, Family Sync between your own two phones. Plus spending alerts are notifications created on your phone by the app. Nothing is sent anywhere to create them. If you export a .syvrosync file and send it to someone, it goes through the app you choose to send it with, not through Syvro.</p>
     <h2>Your control over your data</h2>
     <p>Because everything is stored only on your device, you are always in full control:</p>
     <ul>
       <li>Deleting a bill erases its amount and settings. A small record of the deletion (its name, category, and when it was deleted) stays on your phone so Family Sync can keep your paired phone in step. See "Deleted bills" above.</li>
-      <li>Uninstalling Syvro, or clearing its data in Android's settings, permanently deletes all of your data from that phone, including the deletion records, since nothing is backed up elsewhere</li>
-      <li>If you've synced with a second phone or saved or sent an export file, those copies stay where they are until you delete them there</li>
-      <li>There is no account to delete and no copy of your data held by us to request removal of, because we never receive it</li>
+      <li>Uninstalling Syvro, or clearing its data in Android's settings, permanently deletes all of your data from that phone, including the deletion records, since nothing is backed up elsewhere.</li>
+      <li>If you've synced with a second phone or saved or sent an export file, those copies stay where they are until you delete them there.</li>
+      <li>There is no account to delete and no copy of your data held by us to request removal of, because we never receive it.</li>
     </ul>
     <h2>Children's privacy</h2>
     <p>Syvro is not directed at children and is not intended for use by anyone under the age of 13. We do not knowingly collect information from children, and given the Syvro app requires no account creation and the app itself sends no data to us, no such collection occurs.</p>
@@ -121,7 +139,7 @@
     <h2>Changes to this policy</h2>
     <p>If this policy changes, the "Last updated" date at the top of this page will change accordingly. We encourage you to review this page periodically.</p>
     <h2>Contact</h2>
-    <p>Questions about this policy or how Syvro handles your information can be sent to <a href="mailto:syvrosupport@gmail.com">syvrosupport@gmail.com</a>.</p>
+    <p>Syvro is made by Northfell Digital. Questions about this policy or how Syvro handles your information can be sent to <a href="mailto:syvrosupport@gmail.com">syvrosupport@gmail.com</a>.</p>
   </div>
 </main>
 <footer>
