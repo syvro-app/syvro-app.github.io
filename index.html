@@ -105,6 +105,7 @@
     white-space:nowrap;
   }
   .nav-cta:hover{background:var(--accent-2);transform:translateY(-1px);}
+  .nav-links a.nav-cta,.nav-links a.nav-cta:hover{color:#fff;}
   .nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;}
 
   @media (max-width:800px){
@@ -143,7 +144,7 @@
   }
   .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:20px;}
   .btn-primary{
-    background:var(--accent);color:#fff;padding:14px 28px;border-radius:999px;
+    display:inline-block;text-align:center;background:var(--accent);color:#fff;padding:14px 28px;border-radius:999px;
     font-weight:600;font-size:0.98rem;border:none;cursor:pointer;
     transition:background 0.2s, transform 0.2s;
   }
@@ -164,7 +165,7 @@
     position:relative;z-index:1;width:270px;background:#1b1f36;border:1px solid var(--border);
     border-radius:30px;padding:8px;box-shadow:0 30px 60px -28px rgba(0,0,0,0.85);
   }
-  .hero-phone img{width:100%;height:auto;border-radius:23px;aspect-ratio:1/2;}
+  .hero-phone img{width:100%;height:auto;border-radius:23px;aspect-ratio:720/1408;object-fit:cover;}
   .hero-pair{display:flex;align-items:flex-end;justify-content:center;gap:14px;}
   .hero-visual .mascot-wrap{width:170px;flex-shrink:0;margin-bottom:6px;}
   .mascot-wrap{
@@ -346,7 +347,7 @@
 .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px 28px; max-width: 1120px; margin: 0 auto; }
 .gallery figure { flex: 0 0 240px; margin: 0; }
 .gallery .shot { position: relative; background: #1b1f36; border: 1px solid var(--border); border-radius: 28px; padding: 8px; box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.8); }
-.gallery .shot img { width: 100%; height: auto; border-radius: 21px; aspect-ratio: 1 / 2; }
+.gallery .shot img { width: 100%; height: auto; border-radius: 21px; aspect-ratio: 720 / 1408; object-fit: cover; }
 .gallery .tag { display: inline-block; vertical-align: 2px; margin-left: 6px; background: var(--accent); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; text-shadow: none; }
 .gallery figcaption { margin-top: 14px; font-size: 0.9rem; color: var(--muted); text-align: center; text-shadow: rgba(11, 14, 22, 0.9) 0px 1px 8px; }
 .gallery figcaption b { display: block; color: var(--text); font-size: 1rem; margin-bottom: 2px; }
@@ -374,7 +375,7 @@
           <a href="#features">Features</a>
           <a href="#privacy">Privacy &amp; Security</a>
           <a href="#pricing">Pricing</a>
-          <a href="#waitlist" class="nav-cta">Get notified</a>
+          <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener" class="nav-cta">Get it on Google Play</a>
         </div>
       </nav>
     </header>
@@ -385,11 +386,11 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Coming soon to Android</span>
+            <span class="eyebrow">Now on Google Play · US only for now</span>
             <h1>Know what's actually <span>yours to spend.</span></h1>
             <p class="lead">Syvro reserves money for your bills before they're due, so the number on your screen is money you can actually spend, not just whatever's left in your bank balance.</p>
             <div class="hero-ctas">
-              <a href="#waitlist" class="btn-primary">Get notified at launch</a>
+              <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener" class="btn-primary">Get Syvro on Google Play</a>
               <a href="#how-it-works" class="btn-ghost">See how it works</a>
             </div>
             <div class="trust-line">
@@ -402,7 +403,7 @@
               <div class="mascot-wrap">
                 <img src="assets/syvro_mascot.png" alt="Syvro mascot: a guardian lion, watching over your money">
               </div>
-              <div class="hero-phone"><img src="assets/screens/1_home_v2.webp" width="720" height="1440" alt="Syvro Home screen showing the Safe To Spend amount and funds reserved"></div>
+              <div class="hero-phone"><img src="assets/screens-v3/1_home.webp" width="720" height="1408" alt="Syvro Home screen showing the Safe To Spend amount, bank balance and funds reserved"></div>
             </div>
             <p class="mascot-caption">Syvro, standing guard over your Safe To Spend number.</p>
           </div>
@@ -443,39 +444,51 @@
           <div class="section-head reveal">
             <span class="eyebrow">See it</span>
             <h2>A look inside Syvro</h2>
-            <p>Screens from the current build, filled with demo data.</p>
+            <p>Screens from the app, filled with demo data.</p>
           </div>
           <div class="gallery" aria-label="Syvro screenshots">
             <figure>
-              <div class="shot"><img src="assets/screens/1_home_v2.webp" width="720" height="1440" loading="lazy" alt="Syvro Home screen: Your Safe To Spend amount and funds reserved, at a glance"></div>
+              <div class="shot"><img src="assets/screens-v3/1_home.webp" width="720" height="1408" loading="lazy" alt="Syvro Home screen: Your Safe To Spend amount and funds reserved, at a glance"></div>
               <figcaption><b>Home</b>Your Safe To Spend amount and funds reserved, at a glance.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/2_payday_intel.webp" width="720" height="1440" loading="lazy" alt="Syvro Payday Intel screen: Days until payday, a daily budget, and how tight things are"></div>
-              <figcaption><b>Payday Intel</b>Days until payday, a daily budget, and how tight things are.</figcaption>
+              <div class="shot"><img src="assets/screens-v3/2_dashboard.webp" width="720" height="1408" loading="lazy" alt="Syvro Dashboard screen: Pay-period progress and your upcoming bills"></div>
+              <figcaption><b>Dashboard <span class="tag">Plus</span></b>Pay-period progress and your upcoming bills.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/3_expenses.webp" width="720" height="1440" loading="lazy" alt="Syvro Expenses screen: Bills by category, with what's reserved for each one"></div>
+              <div class="shot"><img src="assets/screens-v3/3_dashboard_categories.webp" width="720" height="1408" loading="lazy" alt="Syvro Dashboard screen: Spending by category, with your monthly total"></div>
+              <figcaption><b>Dashboard <span class="tag">Plus</span></b>Spending by category, with your monthly total.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens-v3/4_expenses.webp" width="720" height="1408" loading="lazy" alt="Syvro Expenses screen: Bills by category, with what's reserved for each one"></div>
               <figcaption><b>Expenses</b>Bills by category, with what's reserved for each one.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/4_add_bill.webp" width="720" height="1440" loading="lazy" alt="Syvro Add a bill screen: Type in a bill once. No bank connection"></div>
-              <figcaption><b>Add a bill</b>Type in a bill once. No bank connection.</figcaption>
+              <div class="shot"><img src="assets/screens-v3/5_payday_intel.webp" width="720" height="1408" loading="lazy" alt="Syvro Payday Intel screen: Days until payday, a daily budget, and how tight things are"></div>
+              <figcaption><b>Payday Intel</b>Days until payday, a daily budget, and how tight things are.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/5_settings.webp" width="720" height="1440" loading="lazy" alt="Syvro Settings screen: App lock, alerts, accounts and Family Sync"></div>
-              <figcaption><b>Settings</b>App lock for everyone. Alerts and accounts with Plus; Family Sync is an add-on.</figcaption>
+              <div class="shot"><img src="assets/screens-v3/6_goals.webp" width="720" height="1408" loading="lazy" alt="Syvro Goals and Savings screen: Track your goals and what to set aside each week"></div>
+              <figcaption><b>Goals &amp; Savings <span class="tag">Plus</span></b>Track your goals and what to set aside each week.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/6_wish_list.webp" width="720" height="1440" loading="lazy" alt="Syvro Wish List screen: Save up for the things you want"></div>
+              <div class="shot"><img src="assets/screens-v3/7_wish_list.webp" width="720" height="1408" loading="lazy" alt="Syvro Wish List screen: Save up for the things you want"></div>
               <figcaption><b>Wish List <span class="tag">Plus</span></b>Save up for the things you want.</figcaption>
             </figure>
             <figure>
-              <div class="shot"><img src="assets/screens/8_family_sync.webp" width="720" height="1440" loading="lazy" alt="Syvro Family Sync screen: Keep two phones in step, no server in between"></div>
+              <div class="shot"><img src="assets/screens-v3/8_family_sync.webp" width="720" height="1408" loading="lazy" alt="Syvro Family Sync screen: Keep two phones in step, no server in between"></div>
               <figcaption><b>Family Sync <span class="tag">Add-on</span></b>Keep two phones in step, no server in between.</figcaption>
             </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens-v3/9_settings.webp" width="720" height="1408" loading="lazy" alt="Syvro Settings screen: App lock for everyone. Alerts and accounts with Plus; Family Sync is an add-on"></div>
+              <figcaption><b>Settings</b>App lock for everyone. Alerts and accounts with Plus; Family Sync is an add-on.</figcaption>
+            </figure>
+            <figure>
+              <div class="shot"><img src="assets/screens-v3/10_add_bill.webp" width="720" height="1408" loading="lazy" alt="Syvro Add a bill screen: Type in a bill once. No bank connection"></div>
+              <figcaption><b>Add a bill</b>Type in a bill once. No bank connection.</figcaption>
+            </figure>
           </div>
-          <p class="gallery-note">Wish List is part of Plus. Family Sync is its own one-time purchase.</p>
+          <p class="gallery-note">Dashboard, Goals and Wish List are part of Plus. Family Sync is its own one-time purchase.</p>
         </div>
       </section>
 
@@ -601,7 +614,7 @@
           </div>
 
           <div class="price-free reveal">
-            <span class="price-badge">At launch</span>
+            <span class="price-badge">Free download</span>
             <h3>Free</h3>
             <div class="price-amount">$0</div>
             <ul>
@@ -615,7 +628,7 @@
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Landscape support</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tip Jar: optional one-time tips of $1.99, $4.99 or $9.99, no features attached</li>
             </ul>
-            <a href="#waitlist" class="btn-primary" style="display:block;text-align:center;">Get notified at launch</a>
+            <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Get it on Google Play</a>
           </div>
 
           <div class="coming-later-head reveal">
@@ -654,22 +667,15 @@
         </div>
       </section>
 
-      <!-- WAITLIST -->
-      <section id="waitlist">
+      <!-- DOWNLOAD -->
+      <section id="download">
+        <span id="waitlist"></span>
         <div class="container">
           <div class="waitlist reveal">
-            <h2>Be first to know when Syvro launches</h2>
-            <p>No spam. We'll only use your email to tell you when Syvro launches. Sign-ups reach us through FormSubmit, a form-forwarding service.</p>
-            <form class="waitlist-form" id="waitlistForm" action="https://formsubmit.co/ajax/syvrosupport@gmail.com" method="POST">
-              <input type="hidden" name="_subject" value="New Syvro waitlist signup">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="email" required name="email" placeholder="you@email.com" id="waitlistEmail" aria-label="Email address">
-              <button type="submit" class="btn-primary">Notify me</button>
-            </form>
-            <p class="waitlist-msg" id="waitlistMsg"></p>
-            <p style="color:var(--muted);font-size:0.78rem;margin-top:14px;"><a href="privacy-policy.html#waitlist" style="color:var(--accent-2);">How we handle your email</a></p>
-            <p style="color:var(--muted);font-size:0.78rem;margin-top:14px;">Questions? Reach us at <a href="mailto:syvrosupport@gmail.com" style="color:var(--accent-2);">syvrosupport@gmail.com</a></p>
+            <h2>Syvro is on Google Play</h2>
+            <p>Free to download. Available in the United States for now.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener" class="btn-primary">Get Syvro on Google Play</a>
+            <p style="color:var(--muted);font-size:0.78rem;margin-top:22px;">Questions? Reach us at <a href="mailto:syvrosupport@gmail.com" style="color:var(--accent-2);">syvrosupport@gmail.com</a></p>
           </div>
         </div>
       </section>
@@ -697,7 +703,7 @@
               <h5>Trust</h5>
               <a href="#privacy">Privacy &amp; Security</a>
               <a href="https://syvro-app.github.io/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
-              <a href="#waitlist">Get notified</a>
+              <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener">Get it on Google Play</a>
             </div>
             <div class="footer-col">
               <h5>Contact</h5>
@@ -708,7 +714,7 @@
         </div>
         <div class="footer-bottom">
           <span>&copy; 2026 Northfell Digital.</span>
-          <span>Android app · Not yet available on Google Play</span>
+          <span>Android app · On Google Play (US only for now)</span>
         </div>
       </div>
     </footer>
@@ -729,34 +735,6 @@
   }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
 
-  // waitlist submit: sends to syvrosupport@gmail.com via FormSubmit (no backend needed for a static site)
-  const form = document.getElementById('waitlistForm');
-  const msg = document.getElementById('waitlistMsg');
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    const btn = form.querySelector('button');
-    const originalLabel = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
-      if (res.ok) {
-        msg.textContent = "Thanks! We'll let you know the moment Syvro is live.";
-        form.reset();
-      } else {
-        throw new Error('Request failed');
-      }
-    } catch (err) {
-      msg.textContent = "Something went wrong. Email us directly at syvrosupport@gmail.com instead.";
-    } finally {
-      btn.disabled = false;
-      btn.textContent = originalLabel;
-    }
-  });
 </script>
 </body>
 </html>
