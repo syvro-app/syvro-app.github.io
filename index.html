@@ -14,6 +14,8 @@
     --panel:#131728;
     --panel-2:#171c33;
     --accent:#7B6FD4;
+    --accent-strong:#6E62CB;   /* white text on this = 4.9:1 (WCAG AA) */
+    --accent-strong-hover:#5F54BC;
     --accent-2:#9c8ff0;
     --text:#FFFFFF;
     --muted:#8a8a95;
@@ -100,11 +102,11 @@
   .nav-links a{font-size:0.92rem;color:var(--muted);transition:color 0.2s;}
   .nav-links a:hover{color:var(--text);}
   .nav-cta{
-    background:var(--accent);color:#fff;padding:9px 18px;border-radius:999px;
+    background:var(--accent-strong);color:#fff;padding:9px 18px;border-radius:999px;
     font-size:0.88rem;font-weight:600;transition:background 0.2s, transform 0.2s;
     white-space:nowrap;
   }
-  .nav-cta:hover{background:var(--accent-2);transform:translateY(-1px);}
+  .nav-cta:hover{background:var(--accent-strong-hover);transform:translateY(-1px);}
   .nav-links a.nav-cta,.nav-links a.nav-cta:hover{color:#fff;}
   .nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;}
 
@@ -144,11 +146,11 @@
   }
   .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:20px;}
   .btn-primary{
-    display:inline-block;text-align:center;background:var(--accent);color:#fff;padding:14px 28px;border-radius:999px;
+    display:inline-block;text-align:center;background:var(--accent-strong);color:#fff;padding:14px 28px;border-radius:999px;
     font-weight:600;font-size:0.98rem;border:none;cursor:pointer;
     transition:background 0.2s, transform 0.2s;
   }
-  .btn-primary:hover{background:var(--accent-2);transform:translateY(-2px);}
+  .btn-primary:hover{background:var(--accent-strong-hover);transform:translateY(-2px);}
   .btn-ghost{
     padding:14px 24px;border-radius:999px;border:1px solid var(--border);
     color:var(--text);font-weight:600;font-size:0.98rem;transition:border-color 0.2s;
@@ -274,7 +276,7 @@
     border:1px solid rgba(123,111,212,0.4);border-radius:20px;padding:40px;
   }
   .price-badge{
-    display:inline-block;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:700;
+    display:inline-block;background:var(--accent-strong);color:#fff;font-size:0.72rem;font-weight:700;
     letter-spacing:0.6px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:18px;
   }
   .price-free h3{font-size:1.5rem;margin-bottom:4px;}
@@ -348,7 +350,7 @@
 .gallery figure { flex: 0 0 240px; margin: 0; }
 .gallery .shot { position: relative; background: #1b1f36; border: 1px solid var(--border); border-radius: 28px; padding: 8px; box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.8); }
 .gallery .shot img { width: 100%; height: auto; border-radius: 21px; aspect-ratio: 720 / 1408; object-fit: cover; }
-.gallery .tag { display: inline-block; vertical-align: 2px; margin-left: 6px; background: var(--accent); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; text-shadow: none; }
+.gallery .tag { display: inline-block; vertical-align: 2px; margin-left: 6px; background: var(--accent-strong); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; text-shadow: none; }
 .gallery figcaption { margin-top: 14px; font-size: 0.9rem; color: var(--muted); text-align: center; text-shadow: rgba(11, 14, 22, 0.9) 0px 1px 8px; }
 .gallery figcaption b { display: block; color: var(--text); font-size: 1rem; margin-bottom: 2px; }
 .gallery-note { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
@@ -358,7 +360,7 @@
 <body>
 
   <div class="shield-watermark" aria-hidden="true">
-    <img src="assets/spendsafe_shield_transparent.png" alt="">
+    <img src="assets/syvro_shield.webp" alt="">
   </div>
 
   <div class="page">
@@ -366,7 +368,7 @@
     <header>
       <nav>
         <a href="#top" class="brand">
-          <span class="brand-mark"><img src="assets/spendsafe_shield_transparent.png" alt="Syvro shield logo"></span>
+          <span class="brand-mark"><img src="assets/syvro_shield.webp" alt="Syvro shield logo"></span>
           <span class="wordmark">SYVRO</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
@@ -401,7 +403,7 @@
           <div class="hero-visual">
             <div class="hero-pair">
               <div class="mascot-wrap">
-                <img src="assets/syvro_mascot.png" alt="Syvro mascot: a guardian lion, watching over your money">
+                <img src="assets/syvro_mascot.webp" alt="Syvro mascot: a guardian lion, watching over your money">
               </div>
               <div class="hero-phone"><img src="assets/screens-v3/1_home.webp" width="720" height="1408" alt="Syvro Home screen showing the Safe to Spend amount, bank balance and funds reserved"></div>
             </div>
@@ -687,7 +689,7 @@
         <div class="footer-top">
           <div class="footer-brand">
             <a href="#top" class="brand">
-              <span class="brand-mark"><img src="assets/spendsafe_shield_transparent.png" alt="Syvro shield logo"></span>
+              <span class="brand-mark"><img src="assets/syvro_shield.webp" alt="Syvro shield logo"></span>
               <span class="wordmark">SYVRO</span>
             </a>
             <p class="footer-tagline">No bank linking. Your financial data stays on your device unless you choose to sync with your partner or export it. Just an honest number for what's actually yours to spend.</p>
