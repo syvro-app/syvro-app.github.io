@@ -306,6 +306,7 @@
   .plan-card li{color:var(--muted);font-size:0.88rem;display:flex;gap:8px;}
   .plan-card li::before{content:"·";color:var(--accent);font-weight:700;}
   .plan-fine{color:var(--muted);font-size:0.82rem;line-height:1.5;}
+  .plan-premium{max-width:900px;margin:24px auto 0;border-style:solid;border-color:rgba(123,111,212,0.5);opacity:1;}
   @media (max-width:700px){.plan-grid{grid-template-columns:1fr;}}
 
   .alacarte-note{
@@ -388,7 +389,7 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Now on Google Play · US only for now</span>
+            <span class="eyebrow">Now on Google Play</span>
             <h1>Know what's actually <span>yours to spend.</span></h1>
             <p class="lead">Syvro reserves money for your bills before they're due, so the number on your screen is money you can actually spend, not just whatever's left in your bank balance.</p>
             <div class="hero-ctas">
@@ -424,7 +425,7 @@
             <div class="step-card reveal">
               <div class="step-num">01</div>
               <h3>Add your bills once</h3>
-              <p>Enter your bills and expenses by hand. No bank connection required. Set them as one-time, weekly, or bi-weekly, and Syvro handles the cadence math correctly, even across month boundaries.</p>
+              <p>Enter your bills and expenses by hand. No bank connection required. Set them as monthly, weekly, every 2 weeks or daily (annual and semi-annual with Plus), and Syvro handles the cadence math correctly, even across month boundaries.</p>
             </div>
             <div class="step-card reveal">
               <div class="step-num">02</div>
@@ -516,7 +517,7 @@
             <div class="feature-card reveal">
               <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
               <h3>Flexible bill frequencies</h3>
-              <p>Once, weekly, or bi-weekly, with correct cadence math, including bi-weekly cycles that don't drift at month boundaries.</p>
+              <p>Monthly, weekly, every 2 weeks or daily, with correct cadence math, including two-week cycles that don't drift at month boundaries. Annual and semi-annual bills come with Plus.</p>
             </div>
             <div class="feature-card reveal">
               <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
@@ -612,7 +613,7 @@
           <div class="section-head reveal">
             <span class="eyebrow">Pricing</span>
             <h2>Free to use. Pay once if you want more.</h2>
-            <p class="pricing-note">No subscriptions. Plus and Family Sync are one-time purchases through Google Play. The Tip Jar ($1.99, $4.99 or $9.99) is optional and unlocks nothing. It's just a way to support the developer.</p>
+            <p class="pricing-note">No subscriptions. Plus, Family Sync and Premium are one-time purchases through Google Play. The Tip Jar ($1.99, $4.99 or $9.99) is optional and unlocks nothing. It's just a way to support the developer.</p>
           </div>
 
           <div class="price-free reveal">
@@ -623,7 +624,8 @@
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Manual bill &amp; expense entry, no bank linking, ever</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Daily Safe to Spend reserve</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Payday Intel pressure meter (Comfortable / Watch It / Tight)</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Once / weekly / bi-weekly frequencies</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Monthly, weekly, every 2 weeks and daily bills</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Paydays weekly, every 2 weeks, twice a month or monthly</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mark as Posted &amp; automatic fund release</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bill rename &amp; delete</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> App lock (screen lock, fingerprint or face)</li>
@@ -644,12 +646,11 @@
               <div class="plan-price">$4.99</div>
               <ul>
                 <li>Dashboard: pay-period progress, upcoming bills and spending by category</li>
-                <li>Home screen widget</li>
                 <li>Wish List</li>
-                <li>Multiple accounts</li>
                 <li>Goals &amp; Savings tracker</li>
+                <li>Multiple accounts</li>
                 <li>Spending alerts</li>
-                <li>Goal forecasting</li>
+                <li>Annual and semi-annual bills</li>
               </ul>
               <p class="plan-fine">Buy it once and it's yours. Everything in Free stays free.</p>
             </div>
@@ -665,6 +666,17 @@
               <p class="plan-fine">$3.99 on each of the two phones. Requires Android 12 or newer on both phones. The phones connect directly using Google's Nearby Connections, and Syvro checks that it's your paired partner. There's no server in between. The manual export file contains your Main account's bills and bank balance. It is plain text and not encrypted, so share it only with someone you trust.</p>
             </div>
           </div>
+          <div class="plan-card plan-premium reveal">
+            <span class="planned-badge">One-time purchase · best value</span>
+            <h4>Premium</h4>
+            <div class="plan-price">$7.99</div>
+            <ul>
+              <li>Everything in Plus</li>
+              <li>Family Sync</li>
+              <li>Payday take-home card and payday projection on Payday Intel</li>
+            </ul>
+            <p class="plan-fine">Already own Plus? Upgrade to Premium for $2.99. Already own Family Sync? Upgrade for $3.99. Nobody pays twice. Owning Plus and Family Sync separately also unlocks the take-home card and payday projection.</p>
+          </div>
           <p class="alacarte-note">We'll never dress up a feature you can't use yet as a reason to pay today. What you see is what you get.</p>
         </div>
       </section>
@@ -675,7 +687,7 @@
         <div class="container">
           <div class="waitlist reveal">
             <h2>Syvro is on Google Play</h2>
-            <p>Free to download. Available in the United States for now.</p>
+            <p>Free to download. Available on Google Play in the US, Canada, Australia, New Zealand, South Africa, Singapore, the Philippines and India.</p>
             <a href="https://play.google.com/store/apps/details?id=com.syvro.app" target="_blank" rel="noopener" class="btn-primary">Get Syvro on Google Play</a>
             <p style="color:var(--muted);font-size:0.78rem;margin-top:22px;">Questions? Reach us at <a href="mailto:syvrosupport@gmail.com" style="color:var(--accent-2);">syvrosupport@gmail.com</a></p>
           </div>
@@ -716,7 +728,7 @@
         </div>
         <div class="footer-bottom">
           <span>&copy; 2026 Northfell Digital.</span>
-          <span>Android app · On Google Play (US only for now)</span>
+          <span>Android app · On Google Play</span>
         </div>
       </div>
     </footer>
